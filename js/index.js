@@ -39,16 +39,35 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let nav = document.querySelector('nav');
+let one = document.createElement('a');
+let two = document.createElement('a');
+
 
 let navs = document.querySelectorAll('a');
-navs[0].textContent = siteContent["nav"]["nav-item-1"];
-navs[1].textContent = siteContent["nav"]["nav-item-2"];
-navs[2].textContent = siteContent["nav"]["nav-item-3"];
-navs[3].textContent = siteContent["nav"]["nav-item-4"];
-navs[4].textContent = siteContent["nav"]["nav-item-5"];
-navs[5].textContent = siteContent["nav"]["nav-item-6"];
+for( let i = 0; i < navs.length; i++){
+  navs[i].innerHTML = siteContent.nav["nav-item-" + (i+1)];  
+}
+nav.appendChild(one);
+one.innerHTML = "One";
+one.href = "#";
+nav.prepend(two);
+two.innerHTML="Our Code";
+two.href ="#";
+let navscolor = document.querySelectorAll('a');
+navscolor.forEach(nav => nav.style.color="green");
+console.log(navs);
+// console.log(navs[0].textContent = siteContent["nav"]["nav-item-1"])
+// navs[1].textContent = siteContent["nav"]["nav-item-2"];
+// navs[2].textContent = siteContent["nav"]["nav-item-3"];
+// navs[3].textContent = siteContent["nav"]["nav-item-4"];
+// navs[4].textContent = siteContent["nav"]["nav-item-5"];
+// navs[5].textContent = siteContent["nav"]["nav-item-6"];
 
+
+// navs[6].textContent = "Our Code";
 
 let cta = document.querySelector('.cta-text h1');
 cta.textContent = siteContent["cta"]["h1"];
@@ -92,3 +111,10 @@ contactp[2].textContent = siteContent["contact"]["email"];
 
 let footer = document.querySelector('footer');
 footer.textContent = siteContent["footer"]["copyright"];
+
+
+// let nav = document.querySelector('nav');
+// let one = document.createElement('a');
+// nav.appendChild(a);
+// one.innerHTML = "One";
+// one.href="#";
