@@ -48,7 +48,7 @@ let two = document.createElement('a');
 
 let navs = document.querySelectorAll('a');
 for( let i = 0; i < navs.length; i++){
-  navs[i].innerHTML = siteContent.nav["nav-item-" + (i+1)];  
+  navs[i].innerHTML = siteContent.nav["nav-item-" + (i+1)];
 }
 nav.appendChild(one);
 one.innerHTML = "One";
@@ -70,7 +70,7 @@ console.log(navs);
 // navs[6].textContent = "Our Code";
 
 let cta = document.querySelector('.cta-text h1');
-cta.textContent = siteContent["cta"]["h1"];
+cta.textContent = `DOM \n IS \n AWESOME`;
 
 
 let btn = document.querySelector('.cta-text button');
@@ -105,7 +105,7 @@ let contacthead = document.querySelector('.contact h4');
 contacthead.textContent = siteContent["contact"]["contact-h4"];
 
 let contactp = document.querySelectorAll('.contact p');
-contactp[0].textContent = siteContent["contact"]["address"];
+contactp[0].textContent = `123 Way 456 Street \n Somewhere, USA`;
 contactp[1].textContent = siteContent["contact"]["phone"];
 contactp[2].textContent = siteContent["contact"]["email"];
 
