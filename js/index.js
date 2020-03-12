@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \n Is \n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -47,7 +47,7 @@ const two = document.createElement('a');
 
 
 const navs = document.querySelectorAll('a');
-for( let i = 0; i < navs.length; i++){
+for(let i = 0; i < navs.length; i++){
   navs[i].textContent = siteContent.nav["nav-item-" + (i+1)];
 }
 
@@ -71,7 +71,7 @@ navscolor.forEach(nav => nav.style.color="green");
 // navs[6].textContent = "Our Code";
 
 const cta = document.querySelector('.cta-text h1');
-cta.textContent = `DOM \n IS \n AWESOME`;
+cta.textContent = siteContent["cta"]["h1"];
 
 
 const btn = document.querySelector('.cta-text button');
@@ -106,7 +106,7 @@ const contacthead = document.querySelector('.contact h4');
 contacthead.textContent = siteContent["contact"]["contact-h4"];
 
 const contactp = document.querySelectorAll('.contact p');
-contactp[0].textContent = `123 Way 456 Street \n Somewhere, USA`;
+contactp[0].textContent = siteContent["contact"]["address"];
 contactp[1].textContent = siteContent["contact"]["phone"];
 contactp[2].textContent = siteContent["contact"]["email"];
 
